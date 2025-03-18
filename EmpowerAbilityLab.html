@@ -35,56 +35,129 @@
         </nav>
     </header>
     <main>
-      <!-- Main landing view -->
-      <div class="jumbotron">
-        <div class="container">
-          <h2>Welcome to Empower Ability Labs!</h2>
-          <p>Empower Ability Labs is a hub for learning and empathy-building.  We are on a mission to 
-            foster understanding and promote inclusive digital experiences for all. We offer a range of 
-            services designed to promote accessibility awareness, drive inclusivity, and enhance the user 
-            experience. And help you find answers on How do people with disabilities use technology and 
-            navigate the digital world? What tools do they employ?</p>
 
-            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
-              Meet the Empower Community! 
-            </button>
+      <div id="home">
+        <!-- Main landing view -->
+        <div class="jumbotron">
+          <div class="container">
+            <h2>Welcome to Empower Ability Labs!</h2>
+            <p>Empower Ability Labs is a hub for learning and empathy-building.  We are on a mission to 
+              foster understanding and promote inclusive digital experiences for all. We offer a range of 
+              services designed to promote accessibility awareness, drive inclusivity, and enhance the user 
+              experience. And help you find answers on How do people with disabilities use technology and 
+              navigate the digital world? What tools do they employ?</p>
+
+              <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+                Meet the Empower Community! 
+              </button>
+          </div>
         </div>
+
+        <div class="container">
+          <!-- Example row of columns -->
+          <div class="row">
+            <div class="col-md-4">
+            
+                <p>Empower Ability Labs utilizes a hands-on approach to raise awareness and promote empathy. 
+                  Our immersive workshops and lab days provide participants with a unique opportunity to step 
+                  into the shoes of individuals with disabilities and navigate the </p>
+                
+                <a href="https://www.google.com/search/howsearchworks/our-approach/">Learn more</a>
+            </div>
+            <div class="col-md-4">
+                <p>Promote accessibility awareness and enhance the user experience. </p>
+                <ul>
+                  <li class="nav-item">Empathy lab days and workshops</li>
+                  <li class="nav-item">Go beyond WCAG compliance!</li>
+                  <li class="nav-item">Inspirational speakers.</li>
+                </ul>
+                
+                <a href="https://www.elevenways.be/en/services">Learn more</a>
+            </div>
+            <div class="col-md-4">
+                <p>Invite a speaker with disabilities to share their unique journey. This captivating addition 
+                  to your upcoming event will offer insights that resonate,  inspire, educate, and enrich your 
+                  team’s understanding of inclusion.</p>
+
+                <a href="https://dictionary.cambridge.org/us/dictionary/english/testimonial">Learn more</a>
+            </div>
+          </div>
+
+          <hr>
+
+        </div> <!-- /container -->
       </div>
 
-      <div class="container">
-        <!-- Example row of columns -->
-        <div class="row">
-          <div class="col-md-4">
-          
-              <p>Empower Ability Labs utilizes a hands-on approach to raise awareness and promote empathy. 
-                Our immersive workshops and lab days provide participants with a unique opportunity to step 
-                into the shoes of individuals with disabilities and navigate the </p>
-              
-              <a href="https://www.google.com/search/howsearchworks/our-approach/">Learn more</a>
+      <div id="Services">
+        <h2> Service content architecture </h2>
+
+        <p> Dedicated space or programs designed to cultivate empathy 
+          and understanding among individuals towards the challenges faced by 
+          people with disabilities in using technology and interacting with 
+          various environments.</p>
+
+        <h3> Empathy Lab days and workshops </h3>
+
+        <p> The lab days and workshops typically provide hands-on experiences, 
+          simulations, and interactions with assistive technologies, tools, and 
+          scenarios that replicate the obstacles individuals with disabilities encounter daily.</p>
+
+        <h3> Inspirational speakers </h3>
+
+        <p> Invite a speaker with disabilities to take share their unique journey. 
+          This captivating addition to your upcoming event will offer insights that 
+          resonate, inspire, educate, and enrich your team collective understanding of inclusion. </p>
+
+        <h3> Usability testing</h3>
+
+        <p> Go beyond WCAG! Involve individuals with disabilities in usability testing to gather 
+          valuable insights for refining product strategy and identifying accessibility concerns at an 
+          early stage when solutions are more feasible and cost-effective. You have access to a diverse 
+          community of people with disabilities, who use various assistive technologies. With technical 
+          expertise ranging from novice to expert, our community can support your product lifecycle from 
+          user research, to design, to QA.</p>
+      </div>
+
+      <div id="call">
+        <p> At Empower Ability Labs, we are dedicated to cultivating empathy and driving positive change through 
+          immersive experiences.  Fill out the form below and we’ll get back to you as soon as we can to schedule
+          a call with our sales team!</p>
+
+        <form>
+          <div class="required form-group">
+            <label for="business">Business Name: </label>
+            <input id="business" type="text" name="business" class="form-control">
           </div>
-          <div class="col-md-4">
-              <p>Promote accessibility awareness and enhance the user experience. </p>
-              <ul>
-                <li class="nav-item">Empathy lab days and workshops</li>
-                <li class="nav-item">Go beyond WCAG compliance!</li>
-                <li class="nav-item">Inspirational speakers.</li>
-              </ul>
-              
-              <a href="https://www.elevenways.be/en/services">Learn more</a>
+
+          <div class="required form-group">
+            <label for="phoneNumber">Phone number (613-123-1234): </label>
+            <input id="phoneNumber" type="text" name="phoneNumber" class="form-control">
           </div>
-          <div class="col-md-4">
-              <p>Invite a speaker with disabilities to share their unique journey. This captivating addition 
-                to your upcoming event will offer insights that resonate,  inspire, educate, and enrich your 
-                team’s understanding of inclusion.</p>
 
-              <a href="https://dictionary.cambridge.org/us/dictionary/english/testimonial">Learn more</a>
+          <div class="required form-group">
+            <label for="email">Email: </label>
+            <input id="email" type="text" name="email" class="form-control">
           </div>
-        </div>
 
-        <hr>
-
-      </div> <!-- /container -->
-
+          <fieldset id="majors">
+            <legend>What would you like to talk about:</legend>
+            <ul class="list-unstyled">
+              <li>
+                <label for="cs">Awareness lab days and workshops </label>
+                <input type="checkbox">
+              </li>
+              <li>
+                <label for="eng">Invite a speaker with disabilities to your event </label>
+                <input type="checkbox">
+              </li>
+              <li>
+                <label for="eco">Usability testing </label>
+                <input type="checkbox">
+              </li>
+            </ul>
+          </fieldset>
+        </form>
+      </div>
     </main>
 
     <footer class="container">
