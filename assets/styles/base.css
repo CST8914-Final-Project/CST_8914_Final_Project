@@ -1,3 +1,5 @@
+/* THE COLOURS WE ARE USING IN OUR PROJECT: */
+
 :root {
     --primary: #d87d4a;
     --dark: #101010;
@@ -13,7 +15,7 @@ body {
     flex-direction: column;
     gap: 20px;
     padding: 20px;
-    background-color: var(--lightGrey);
+    background-color: var(--lightGrey); /*how to use the colours we defined in the root*/
 }
 
 .btn {
