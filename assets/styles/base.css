@@ -1,0 +1,142 @@
+:root {
+    --primary: #d87d4a;
+    --dark: #101010;
+    --grey: #f1f1f1;
+    --lightGrey: #fafafa;
+    --lightPrimary: #fbaf85;
+    --error: #CD2C2C;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+    background-color: var(--lightGrey);
+}
+
+.btn {
+    padding: 15px 30px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.primary {
+    background-color: var(--primary);
+    color: white;
+}
+
+.primary:hover {
+    background-color: var(--lightPrimary);
+}
+
+.light {
+    background-color: black;
+    color: white;
+    border: 1px solid black;
+}
+
+.light:hover {
+    background-color: white;
+    color: black;
+}
+
+.hover {
+    background: none;
+    color: black;
+    border: none;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+}
+
+.hover:hover {
+    color: var(--primary);
+}
+
+.hover .arrow {
+    margin-left: 8px;
+    color: var(--primary);
+    font-size: 20px;
+}
+
+.input-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.input-label {
+    font-size: 12px;
+    font-weight: bold;
+    color: var(--dark);
+    margin-bottom: 5px;
+}
+
+.input-field {
+    padding: 18px 24px;
+    border: 1px solid var(--grey);
+    border-radius: 8px;
+    background-color: white;
+    font-size: 16px;
+    transition: border 0.3s;
+}
+
+.input-field:focus {
+    border-color: var(--primary);
+    outline: none;
+}
+
+.input-field:invalid {
+    border: 2px solid var(--error);
+}
+
+.error-message {
+    font-size: 10px;
+    color: var(--error);
+    margin-top: 5px;
+}
+
+.checkbox-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.custom-checkbox {
+    width: 18px;
+    height: 18px;
+    border: 2px solid var(--primary);
+    appearance: none;
+    cursor: pointer;
+    border-radius: 4px;
+    position: relative;
+    background-color: white;
+    transition: all 0.3s ease;
+}
+
+.custom-checkbox:checked {
+    background-color: var(--primary);
+}
+
+.custom-checkbox:checked::after {
+    content: '\2713';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.checkbox-label {
+    font-size: 14px;
+    color: var(--dark);
+}
