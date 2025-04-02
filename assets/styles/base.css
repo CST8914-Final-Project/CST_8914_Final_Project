@@ -207,18 +207,12 @@ nav a:focus {
   display: none;
 }
 
+
 footer {
-  margin-top: 2rem;
-  border-top: 1px solid var(--lightPrimary);
-  padding-top: 1rem;
+    background-color: #f5f5f5;
+    padding: 1rem;
+    font-size: 0.875rem;
+    text-align: center;
+    margin-top: 2rem;
 }
-
-header img {
-  width: 25%;
-}
-
-header {
-  display: flex;
-  gap: 10rem;
-  align-items: center;
-}
+  
