@@ -1,180 +1,217 @@
 /* THE COLOURS WE ARE USING IN OUR PROJECT: */
 
 :root {
-    --primary: #d87d4a;
-    --dark: #101010;
-    --grey: #f1f1f1;
-    --lightGrey: #fafafa;
-    --lightPrimary: #fbaf85;
-    --error: #CD2C2C;
+  --primary: #d87d4a;
+  --dark: #101010;
+  --grey: #f1f1f1;
+  --lightGrey: #fafafa;
+  --lightPrimary: #fbaf85;
+  --error: #cd2c2c;
 }
 
 body {
-    font-family: Arial, sans-serif;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    padding: 20px;
-    background-color: var(--lightGrey); /*how to use the colours we defined in the root*/
+  font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  font-size: 16px;
+  gap: 20px;
+  padding: 5vw 10vw;
+  background-color: var(--grey); /*how to use the colours we defined in the root*/
 }
 
 .btn {
-    padding: 15px 30px;
-    border-radius: 5px;
-    font-size: 16px;
-    cursor: pointer;
-    border: none;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: all 0.3s ease;
+  padding: 15px 30px;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
 }
 
 .primary {
-    background-color: var(--primary);
-    color: white;
+  background-color: var(--primary);
+  color: white;
 }
 
 .primary:hover {
-    background-color: var(--lightPrimary);
+  background-color: var(--lightPrimary);
 }
 
 .light {
-    background-color: black;
-    color: white;
-    border: 1px solid black;
+  background-color: black;
+  color: white;
+  border: 1px solid black;
 }
 
 .light:hover {
-    background-color: white;
-    color: black;
+  background-color: white;
+  color: black;
 }
 
 .hover {
-    background: none;
-    color: black;
-    border: none;
-    font-weight: bold;
-    display: flex;
-    align-items: center;
+  background: none;
+  color: black;
+  border: none;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
 }
 
 .hover:hover {
-    color: var(--primary);
+  color: var(--primary);
 }
 
 .hover .arrow {
-    margin-left: 8px;
-    color: var(--primary);
-    font-size: 20px;
+  margin-left: 8px;
+  color: var(--primary);
+  font-size: 20px;
 }
 
 .input-container {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
 .input-label {
-    font-size: 12px;
-    font-weight: bold;
-    color: var(--dark);
-    margin-bottom: 5px;
+  font-size: 12px;
+  font-weight: bold;
+  color: var(--dark);
+  margin-bottom: 5px;
 }
 
 .input-field {
-    padding: 18px 24px;
-    border: 1px solid var(--grey);
-    border-radius: 8px;
-    background-color: white;
-    font-size: 16px;
-    transition: border 0.3s;
+  padding: 18px 24px;
+  border: 1px solid var(--grey);
+  border-radius: 8px;
+  background-color: white;
+  font-size: 16px;
+  transition: border 0.3s;
 }
 
 .input-field:focus {
-    border-color: var(--primary);
-    outline: none;
+  border-color: var(--primary);
+  outline: none;
 }
 
 .input-field:invalid {
-    border: 2px solid var(--error);
+  border: 2px solid var(--error);
 }
 
 .error-message {
-    font-size: 10px;
-    color: var(--error);
-    margin-top: 5px;
+  font-size: 10px;
+  color: var(--error);
+  margin-top: 5px;
 }
 
 .checkbox-container {
-    display: flex;
-    align-items: center;
-    gap: 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 
 .custom-checkbox {
-    width: 18px;
-    height: 18px;
-    border: 2px solid var(--primary);
-    appearance: none;
-    cursor: pointer;
-    border-radius: 4px;
-    position: relative;
-    background-color: white;
-    transition: all 0.3s ease;
+  width: 18px;
+  height: 18px;
+  border: 2px solid var(--primary);
+  appearance: none;
+  cursor: pointer;
+  border-radius: 4px;
+  position: relative;
+  background-color: white;
+  transition: all 0.3s ease;
 }
 
 .custom-checkbox:checked {
-    background-color: var(--primary);
+  background-color: var(--primary);
 }
 
 .custom-checkbox:checked::after {
-    content: '\2713';
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: white;
-    font-size: 14px;
-    font-weight: bold;
+  content: "\2713";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 14px;
+  font-weight: bold;
 }
 
 .checkbox-label {
-    font-size: 14px;
-    color: var(--dark);
+  font-size: 14px;
+  color: var(--dark);
 }
-nav a  {
-    margin: 0 1rem;
-      cursor: pointer;
-      text-decoration: none;
-      color: black;
-  }
-
-  nav a:focus, nav a[aria-pressed="true"] {
-    /* outline: 2px solid var(--primary); */
-    color: var(--primary);
-    /* color: white; */
-  }
+nav {
+  width: 35vw;
+}
 
 nav ul {
-    text-decoration: none;
-    display: flex;
-      list-style-type: none;
-      padding: 0;
-  }
-  nav a:focus {
-    outline: 2px solid var(--primary);
-    border-radius: 4px;
-  }
-  .hidden {
-    display: none;
-  }
-
-
-footer {
-    background-color: #f5f5f5;
-    padding: 1rem;
-    font-size: 0.875rem;
-    text-align: center;
-    margin-top: 2rem;
+  display: flex;
+  list-style-type: none;
+  width: 100%;
+  justify-content: space-between;
+  border: 2px solid var(--lightPrimary);
+  box-shadow: 1px 1px 5px var(--lightPrimary);
+  border-radius: 4px;
+  padding: 0;
+  margin: 0;
+  /* background-color: var(--lightPrimary); Ensure full background */
 }
+
+nav li {
+  flex-grow: 1;
+  text-align: center;
+  height: 100%;
+  padding: 0.5rem 0;
+}
+
+nav a {
+  display: block; /* Make links fill the entire list item */
+  width: 100%;
+  text-align: center;
+  text-decoration: none;
+  color: black;
+  font-size: 1.25rem;
+  padding: .5rem 0;
+  height: 100%;
+}
+
+nav li:has(a[aria-pressed="true"]) {
+  background-color: var(--lightPrimary); /* Highlight active tab */
+  color: var(--dark);
+}
+
+nav li:has(a[aria-pressed="true"]):hover {
+  background-color: var(--primary);
+  color: var(--dark);
+}
+nav a[aria-pressed="true"]:hover {
+  color: var(--dark);
+}
+
+nav a:hover {
+  color: var(--primary);
+}
+
+.hidden {
+  display: none;
+}
+
+  footer {
+    margin-top: 2rem;
+    border-top: 1px solid var(--lightPrimary);
+    padding-top: 1rem;
+    text-align: center;
+  }
+
+  header img {
+    width: 25%;
+  }
   
+  header {
+    display: flex;
+    gap: 10rem;
+    align-items: center;
+  }
