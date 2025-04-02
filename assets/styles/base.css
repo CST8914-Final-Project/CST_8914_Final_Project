@@ -203,6 +203,7 @@ nav a:hover {
     margin-top: 2rem;
     border-top: 1px solid var(--lightPrimary);
     padding-top: 1rem;
+    text-align: center;
   }
 
   header img {
