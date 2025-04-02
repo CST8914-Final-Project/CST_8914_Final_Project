@@ -15,8 +15,12 @@ body {
   flex-direction: column;
   font-size: 16px;
   gap: 20px;
-  padding: 5vw 10vw;
+  padding: 4vw 8vw 0 8vw;
+  min-height: 85vh;
   background-color: var(--grey); /*how to use the colours we defined in the root*/
+}
+main {
+  flex-grow: 1;
 }
 
 .btn {
