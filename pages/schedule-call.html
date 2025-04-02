@@ -21,7 +21,36 @@
       
             <p>At Empower Ability Labs, we are dedicated to cultivating empathy and driving positive change through immersive experiences.  Fill out the form below and we’ll get back to you as soon as we can to schedule a call with our sales team!</p>
       
-              
+      <form action="#" method="POST">
+        <label for="businessName">Business Name:</label>
+        <input type="text" id="businessName" name="businessName">
+
+        <label for="phoneNumber">Phone Number:</label>
+        <input type="tel" id="phoneNumber" name="phoneNumber" placeholder="613-123-1234">
+
+        <label for="email">Email (required):</label>
+        <input type="email" id="email" name="email" required>
+
+        <div role="group" aria-labelledby="topicsLabel">
+          <p id="topicsLabel">What would you like to talk about?</p>
+          <ul>
+            <li>
+              <input type="checkbox" id="awareness" name="topics" value="awareness">
+              <label for="awareness">Awareness lab days and workshops</label>
+            </li>
+            <li>
+              <input type="checkbox" id="speaker" name="topics" value="speaker">
+              <label for="speaker">Invite a speaker with disabilities to your event</label>
+            </li>
+            <li>
+              <input type="checkbox" id="usability" name="topics" value="usability">
+              <label for="usability">Usability testing</label>
+            </li>
+          </ul>
+        </div>
+
+
+
       
 
       <!--<p>rahaf</p> -->
