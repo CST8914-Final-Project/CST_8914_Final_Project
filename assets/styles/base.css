@@ -142,3 +142,35 @@ body {
     font-size: 14px;
     color: var(--dark);
 }
+nav a  {
+    margin: 0 1rem;
+      cursor: pointer;
+      text-decoration: none;
+      color: black;
+  }
+
+  nav a:focus, nav a[aria-pressed="true"] {
+    /* outline: 2px solid var(--primary); */
+    color: var(--primary);
+    /* color: white; */
+  }
+
+nav ul {
+    text-decoration: none;
+    display: flex;
+      list-style-type: none;
+      padding: 0;
+  }
+  nav a:focus {
+    outline: 2px solid var(--primary);
+    border-radius: 4px;
+  }
+  .hidden {
+    display: none;
+  }
+
+  footer {
+    margin-top: 2rem;
+    border-top: 1px solid var(--lightPrimary);
+    padding-top: 1rem;
+  }
