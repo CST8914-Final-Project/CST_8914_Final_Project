@@ -1,49 +1,40 @@
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Empower Ability Labs</title>
-  <style>
-    nav a {
-      margin: 0 1rem;
-      cursor: pointer;
-      text-decoration: underline;
-    }
-
-    .hidden {
-      display: none;
-    }
-
-    footer {
-      margin-top: 2rem;
-      border-top: 1px solid #ccc;
-      padding-top: 1rem;
-    }
-  </style>
+  <title>Empower Ability Labs - Home</title>
+  <link rel="stylesheet" href="/assets/styles/base.css" />
 </head>
 <body>
   <!-- Header -->
   <header>
-    <h1>Empower Ability Labs</h1>
-    <nav>
-      <a onclick="navigateTo('home')">Home</a>
-      <a onclick="navigateTo('services')">Services</a>
-      <a onclick="navigateTo('schedule')">Schedule a Call</a>
+    <h1 id="site-title">Empower Ability Labs</h1>
+    <nav aria-label="Main Navigation">
+      <ul>
+        <li><a href="#" onclick="navigateTo(event, 'home')" id="home-link" role="button" aria-pressed="true" tabindex="0">Home</a></li>
+        <li><a href="#" onclick="navigateTo(event, 'services')" id="services-link" role="button" aria-pressed="false" tabindex="0">Services</a></li>
+        <li><a href="#" onclick="navigateTo(event, 'schedule')" id="schedule-link" role="button" aria-pressed="false" tabindex="0">Schedule a Call</a></li>
+      </ul>
     </nav>
   </header>
 
   <!-- Main content -->
   <main>
-    <section id="home">
+    <section id="home" tabindex="-1">
+      <h2>Home</h2>
       <p>This is the Home page content.</p>
     </section>
 
-    <section id="services" class="hidden">
+    <section id="services" class="hidden" tabindex="-1">
+      <h2>Services</h2>
       <p>This is the Services page content.</p>
     </section>
     
-    <section id="schedule" class="hidden">
+    <section id="schedule" class="hidden" tabindex="-1">
+      <h2>Schedule a Call</h2>
       <p>This is the Schedule a Call page content.</p>
     </section>
   </main>
@@ -55,13 +46,50 @@
 
   <!-- JS for switching views -->
   <script>
-    function navigateTo(page) {
+    function navigateTo(event, page) {
+      event.preventDefault(); // Prevent default anchor behavior
+
+      const sections = ['home', 'services', 'schedule'];
+
+      sections.forEach(id => {
+        document.getElementById(id).classList.add('hidden');
+        document.getElementById(`${id}-link`).setAttribute("aria-pressed", "false");
+      });
+
+      const activeSection = document.getElementById(page);
+      const activeLink = document.getElementById(`${page}-link`);
+
+      activeSection.classList.remove('hidden');
+      activeSection.setAttribute("tabindex", "-1");
+      activeSection.focus();
+      activeLink.setAttribute("aria-pressed", "true");
+
+      // Update page title dynamically
+      document.title = `Empower Ability Labs - ${page.charAt(0).toUpperCase() + page.slice(1)}`;
+      history.pushState({ page }, document.title, `#${page}`);
+    }
+   
+    // Enable the page to go back to the previous state when the back button is clicked
+    window.onpopstate = function (event) {
       const sections = ['home', 'services', 'schedule'];
       sections.forEach(id => {
         document.getElementById(id).classList.add('hidden');
+        document.getElementById(`${id}-link`).setAttribute('aria-pressed', 'false');
       });
+      let page = event.state ? event.state.page : 'home';
       document.getElementById(page).classList.remove('hidden');
-    }
+      document.getElementById(`${page}-link`).setAttribute('aria-pressed', 'true');
+      document.title = `Empower Ability Labs - ${page.charAt(0).toUpperCase() + page.slice(1)}`;
+    };
+    // Enable keyboard navigation for links (Space & Enter keys)
+    document.addEventListener("keydown", function(event) {
+      if ((event.key === " " || event.key === "Enter") && document.activeElement.tagName === "A") {
+        event.preventDefault();
+        document.activeElement.click();
+      }
+    });
   </script>
+
 </body>
 </html>
+
