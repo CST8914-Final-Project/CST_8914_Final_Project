@@ -6,9 +6,13 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Empower Ability Labs - Home</title>
+
   <link rel="stylesheet" href="/assets/styles/base.css" />
+  <link rel="stylesheet" href="/assets/styles/modal.css" />
+  
   <script src="/assets/scripts/utils.js" defer></script>
   <script src="/assets/scripts/navigation.js" defer></script>
+  <script src="/assets/scripts/modal.js" defer></script>
 </head>
 <body>
   <!-- Header -->
@@ -28,7 +32,26 @@
     <section id="home" tabindex="-1">
       <h2>Home</h2>
       <p>This is the Home page content.</p>
-    </section>
+
+      <button class="btn primary" id="openModalBtn" aria-haspopup="dialog" aria-controls="communityModal" aria-expanded="false">
+        Meet the Empower Community!
+      </button>
+      
+      <!-- Modal -->
+      <div id="communityModal" class="modal hidden" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+        <div class="modal-content">
+          <h3 id="modalTitle" tabindex="-1">Community Steering Committee</h3>
+          <p>We get aha! moments...</p>
+          <ul>
+            <li>McGill University</li>
+            <li>Walmart.ca</li>
+            <li>Apple.ca</li>
+            <li>Google.ca</li>
+            <li>Government of Canada</li>
+          </ul>
+          <button class="btn light" id="closeModalBtn">Close</button>
+        </div>
+      </div>
 
     <section id="services" class="hidden" tabindex="-1">
       <h2>Services</h2>
