@@ -1,0 +1,139 @@
+/* services.css */
+
+/* Define color variables */
+:root {
+    --primary: #d87d4a;
+    --dark: #101010;
+    --grey: #f1f1f1;
+    --lightGrey: #fafafa;
+    --lightPrimary: #fbaf85;
+    --error: #cd2c2c;
+  }
+  
+  /* Basic reset and global styles */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Prevent horizontal scroll if any element overflows */
+  html, body {
+    overflow-x: hidden;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    background-color: var(--grey);
+    color: var(--dark);
+    line-height: 1.5;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  /* Header Styles */
+  header {
+    background-color: var(--primary);
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  header img {
+    width: 120px;
+    height: auto;
+  }
+  
+  /* Navbar Styles */
+  nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+  }
+  
+  nav li {
+    display: inline-block;
+  }
+  
+  nav a {
+    text-decoration: none;
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
+    padding: 0.5rem;
+    transition: background-color 0.3s ease;
+  }
+  
+  nav a:hover {
+    background-color: var(--lightPrimary);
+    color: var(--dark);
+  }
+  
+  /* Main Content */
+  main {
+    flex: 1;
+    padding: 2rem;
+  }
+  
+  /* Footer */
+  footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: var(--lightGrey);
+    color: var(--dark);
+  }
+  
+  /* Services Section */
+  #services {
+    background-color: white;
+    border-radius: 4px;
+    padding: 2rem;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  #services h2 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: var(--primary);
+  }
+  
+  #services h3 {
+    font-size: 1.3rem;
+    margin-top: 1.5rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  #services p {
+    margin-bottom: 1rem;
+    line-height: 1.6;
+  }
+  
+  /* Image styling for desktop */
+  .desktop-img {
+    float: right;
+    margin-left: 20px;
+    width: 200px;
+    max-width: 100%;
+    height: auto;
+    border: 2px solid var(--primary);
+  }
+  
+  /* Responsive adjustments for mobile */
+  @media (max-width: 768px) {
+    #services {
+      font-size: 1.1rem;
+      padding: 10px;
+    }
+    
+    .desktop-img {
+      float: none; /* Remove float on mobile */
+      margin: 0 auto 1rem auto; /* Center the image; remove left margin */
+      width: 70%;
+      max-width: 300px;
+    }
+  }
+  
