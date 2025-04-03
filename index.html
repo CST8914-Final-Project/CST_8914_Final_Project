@@ -14,13 +14,21 @@
   <script src="assets/scripts/utils.js" defer></script>
   <script src="assets/scripts/navigation.js" defer></script>
   <script src="assets/scripts/modal.js" defer></script>
+  <script src="assets/scripts/nav.js" defer></script>
+
 </head>
 <body>
   <!-- Header -->
   <header>
-    <!-- <h1 id="site-title">Empower Ability Labs</h1> -->
     <img src="assets/images/empowerabilitylabslogo.png" alt="Empower Ability LABS logo" />
-    <nav aria-label="Main Navigation">
+  
+    <button id="menuToggle" aria-label="Toggle Navigation" aria-expanded="false" aria-controls="mainNav" class="menu-toggle" aria-haspopup="true">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+        <path d="M3 6H21M3 12H21M3 18H21" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+      </svg>
+    </button>
+  
+    <nav id="mainNav" aria-label="Main Navigation">
       <ul>
         <li><a href="#" onclick="navigateTo(event, 'home')" id="home-link" role="button" aria-pressed="true" tabindex="0">Home</a></li>
         <li><a href="#" onclick="navigateTo(event, 'services')" id="services-link" role="button" aria-pressed="false" tabindex="0">Services</a></li>
@@ -68,7 +76,7 @@
             individuals towards the challenges faced by people with disabilities in using 
             technology and interacting with various environments.
           </p>
-          <img src="../assets/images/services.png" 
+          <img src="assets/images/services.png" 
           alt="" 
           />
         </div>
