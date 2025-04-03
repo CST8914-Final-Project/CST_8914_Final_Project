@@ -39,7 +39,14 @@ main {
   background-color: var(--primary);
   color: white;
 }
-
+.switchToggle {
+  width: 50px !important;  /* Force width */
+  height: auto !important; /* Maintain aspect ratio */
+  max-width: 50px !important; 
+  max-height: 50px !important;
+  cursor: pointer;
+  display: block; /* Ensures it respects the sizing */
+}
 .primary:hover {
   background-color: var(--lightPrimary);
 }
