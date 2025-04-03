@@ -12,7 +12,7 @@
     padding: 16px;
     box-sizing: border-box;
 }
-  
+
 .modal-content {
     background-color: white;
     width: 100%;
@@ -63,4 +63,3 @@
       font-size: 0.9rem;
     }
 }
-  
