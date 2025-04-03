@@ -1,20 +1,17 @@
-//Template Function that can be used to run JavaScript on the page
-//Note: This can be changed to whatever JavaScript formatting you would like
-function knowledgeRunner(){
+// Template Function (currently empty)
+function knowledgeRunner() {}
 
-}
-
-
+// Function to toggle the image source
 function toggleChange() {
-    var imageTag = document.getElementById('switchToggle').src;
-    imageTag = imageTag.replace(/^.*[\\\/]/, 'images/');
-    window.alert(imageTag);
-    if (imageTag === "images/toggle_switch_off.jpg") {
-        document.getElementById('switchToggle').src = 'images/toggle_switch_on.jpg';
+    var imageTag = document.getElementById('switchToggle');
+    var currentSrc = imageTag.src.split('/').pop(); // Extract only the filename
+
+    if (currentSrc === "toggle_switch_off.jpg") {
+        imageTag.src = "/assets/images/toggle_switch_on.jpg"; // Update to ON
     } else {
-        document.getElementById('switchToggle').src = 'images/toggle_switch_off.jpg';
+        imageTag.src = "/assets/images/toggle_switch_off.jpg"; // Update to OFF
     }
 }
 
-
-knowledgeRunner()
+// Initialize (if needed)
+knowledgeRunner();
