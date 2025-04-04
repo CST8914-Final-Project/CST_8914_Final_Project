@@ -37,7 +37,7 @@ main {
 
 .primary {
   background-color: var(--primary);
-  color: white;
+  color: black;
 }
 .switchToggle {
   width: 50px !important;  /* Force width */
