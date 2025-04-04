@@ -242,153 +242,155 @@
         </div>
       </section>
       <section id="schedule" class="hidden" tabindex="-1">
-        <div class="schedule-image">
-          <div>
-            <h1 tabindex="0">Schedule a Call</h1>
-            <p>
-              At Empower Ability Labs, we are dedicated to cultivating empathy
-              and driving positive change through immersive experiences. Fill
-              out the form below and we’ll get back to you as soon as we can to
-              schedule a call with our sales team!
-            </p>
+        <div class="margin-auto">
+          <div class="schedule-image">
+            <div>
+              <h1 tabindex="0">Schedule a Call</h1>
+              <p>
+                At Empower Ability Labs, we are dedicated to cultivating empathy
+                and driving positive change through immersive experiences. Fill
+                out the form below and we’ll get back to you as soon as we can to
+                schedule a call with our sales team!
+              </p>
+            </div>
+            <img src="assets/images/scheduleacall.png" alt="" />
           </div>
-          <img src="assets/images/scheduleacall.png" alt="" />
-        </div>
-
-        <div id="call">
-          <form>
-            <!-- Business Name -->
-
-            <div class="form-group inline-label">
-              <label for="business">Business Name:</label>
-              <input
-                id="business"
-                type="text"
-                name="business"
-                placeholder="Your Business"
-              />
-            </div>
-
-            <!-- Phone Number -->
-            <div class="form-group inline-label">
-              <label for="phoneNumber">Phone Number:</label>
-              <input
-                id="phoneNumber"
-                type="text"
-                name="phoneNumber"
-                placeholder="613-123-1234"
-              />
-            </div>
-
-            <!-- Email -->
-            <div class="form-group inline-label">
-              <label for="email">Email (required):</label>
-              <div>
+  
+          <div id="call">
+            <form>
+              <!-- Business Name -->
+  
+              <div class="form-group inline-label">
+                <label for="business">Business Name:</label>
                 <input
-                  id="email"
+                  id="business"
                   type="text"
-                  name="email"
-                  placeholder="you@example.com"
-                  aria-describedby="email-error"
-                  aria-invalid="false"
+                  name="business"
+                  placeholder="Your Business"
                 />
-                <p
-                  id="email-error"
-                  aria-live="assertive"
-                  role="alert"
-                  style="color: #cd2c2c; font-size: 0.9rem"
-                ></p>
               </div>
-            </div>
-
-            <!-- Checkboxes for topics -->
-            <fieldset>
-              <legend>What would you like to talk about?</legend>
-              <ul class="checkbox-list">
-                <li>
-                  <div class="checkbox-container">
-                    <input
-                      type="checkbox"
-                      id="awareness"
-                      name="topics"
-                      value="awareness"
-                      class="custom-checkbox"
-                    />
-                    <label for="awareness" class="checkbox-label"
-                      >Awareness lab days and workshops</label
-                    >
-                  </div>
-                </li>
-                <li>
-                  <div class="checkbox-container">
-                    <input
-                      type="checkbox"
-                      id="speaker"
-                      name="topics"
-                      value="speaker"
-                      class="custom-checkbox"
-                    />
-                    <label for="speaker" class="checkbox-label"
-                      >Invite a speaker with disabilities to your event</label
-                    >
-                  </div>
-                </li>
-                <li>
-                  <div class="checkbox-container">
-                    <input
-                      type="checkbox"
-                      id="usability"
-                      name="topics"
-                      value="usability"
-                      class="custom-checkbox"
-                    />
-                    <label for="usability" class="checkbox-label"
-                      >Usability testing</label
-                    >
-                  </div>
-                </li>
-              </ul>
-            </fieldset>
-
-            <!-- Event Details -->
-            <div id="eventDetails" class="hidden" aria-hidden="true">
-              <label for="event" id="event-label"
-                >Please tell us about your event:</label
+  
+              <!-- Phone Number -->
+              <div class="form-group inline-label">
+                <label for="phoneNumber">Phone Number:</label>
+                <input
+                  id="phoneNumber"
+                  type="text"
+                  name="phoneNumber"
+                  placeholder="613-123-1234"
+                />
+              </div>
+  
+              <!-- Email -->
+              <div class="form-group inline-label">
+                <label for="email">Email (required):</label>
+                <div>
+                  <input
+                    id="email"
+                    type="text"
+                    name="email"
+                    placeholder="you@example.com"
+                    aria-describedby="email-error"
+                    aria-invalid="false"
+                  />
+                  <p
+                    id="email-error"
+                    aria-live="assertive"
+                    role="alert"
+                    style="color: #cd2c2c; font-size: 0.9rem"
+                  ></p>
+                </div>
+              </div>
+  
+              <!-- Checkboxes for topics -->
+              <fieldset>
+                <legend>What would you like to talk about?</legend>
+                <ul class="checkbox-list">
+                  <li>
+                    <div class="checkbox-container">
+                      <input
+                        type="checkbox"
+                        id="awareness"
+                        name="topics"
+                        value="awareness"
+                        class="custom-checkbox"
+                      />
+                      <label for="awareness" class="checkbox-label"
+                        >Awareness lab days and workshops</label
+                      >
+                    </div>
+                  </li>
+                  <li>
+                    <div class="checkbox-container">
+                      <input
+                        type="checkbox"
+                        id="speaker"
+                        name="topics"
+                        value="speaker"
+                        class="custom-checkbox"
+                      />
+                      <label for="speaker" class="checkbox-label"
+                        >Invite a speaker with disabilities to your event</label
+                      >
+                    </div>
+                  </li>
+                  <li>
+                    <div class="checkbox-container">
+                      <input
+                        type="checkbox"
+                        id="usability"
+                        name="topics"
+                        value="usability"
+                        class="custom-checkbox"
+                      />
+                      <label for="usability" class="checkbox-label"
+                        >Usability testing</label
+                      >
+                    </div>
+                  </li>
+                </ul>
+              </fieldset>
+  
+              <!-- Event Details -->
+              <div id="eventDetails" class="hidden" aria-hidden="true">
+                <label for="event" id="event-label"
+                  >Please tell us about your event:</label
+                >
+                <textarea id="event" name="event" aria-labelledby="event-label">
+                </textarea>
+              </div>
+  
+              <!-- Switch Toggle -->
+  
+              <div
+                id="switch"
+                role="switch"
+                aria-checked="false"
+                tabindex="0"
+                aria-labelledby="switch-label"
+                onclick="toggleChange()"
+                onkeydown="toggleChange()"
               >
-              <textarea id="event" name="event" aria-labelledby="event-label">
-              </textarea>
-            </div>
-
-            <!-- Switch Toggle -->
-
-            <div
-              id="switch"
-              role="switch"
-              aria-checked="false"
-              tabindex="0"
-              aria-labelledby="switch-label"
-              onclick="toggleChange()"
-              onkeydown="toggleChange()"
-            >
-              <img
-                id="switchToggle"
-                class="switchToggle"
-                alt=""
-                src="assets/images/toggle_switch_off.jpg"
-              />
-              <span class="switch-label" id="switch-label"
-                >Receive emails about updates and services</span
-              >
-            </div>
-
-            <!--Schedule Button-->
-            <button type="submit" class="btn primary">Schedule a Call</button>
-
-            <!-- Thank You Message (Hidden initially) -->
-            <div id="thankYouMessage" class="hidden">
-              <p>Thank you! Your request has been submitted.</p>
-            </div>
-          </form>
+                <img
+                  id="switchToggle"
+                  class="switchToggle"
+                  alt=""
+                  src="assets/images/toggle_switch_off.jpg"
+                />
+                <span class="switch-label" id="switch-label"
+                  >Receive emails about updates and services</span
+                >
+              </div>
+  
+              <!--Schedule Button-->
+              <button type="submit" class="btn primary">Schedule a Call</button>
+  
+              <!-- Thank You Message (Hidden initially) -->
+              <div id="thankYouMessage" class="hidden">
+                <p>Thank you! Your request has been submitted.</p>
+              </div>
+            </form>
+          </div>
         </div>
       </section>
     </main>
