@@ -56,7 +56,7 @@
   /* Inline label styling: label on left, input on right */
   .inline-label {
     display: flex;
-    align-items: center;
+    align-items: start;
     margin-bottom: 1rem;
   }
   
@@ -69,14 +69,20 @@
   }
   
   .inline-label input {
-    flex: 1;
-    max-width: 250px;
+    /* flex: 1; */
+    width: 20vw;
+    /* width: 100vw; */
+      border:1px solid var(--lightPrimary);
     padding: 0.5rem;
-    border: 1px solid #ccc;
+    /* border: 1px solid #ccc; */
     border-radius: 4px;
     font-size: 1rem;
   }
-  
+  .schedule-image{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
   /* Fieldset styling for checkboxes */
   fieldset {
     border: 1px solid var(--lightPrimary);
@@ -197,6 +203,7 @@
     .inline-label {
       flex-direction: column;
       align-items: flex-start;
+      width: 100%;
     }
   
     .inline-label label {
@@ -204,8 +211,18 @@
       text-align: left;
       margin-bottom: 0.25rem;
     }
-  
+    .schedule-image{
+      display: grid;
+      justify-content: center;
+    }
+  .schedule-image img{
+    margin: auto;
+  }
     .inline-label input {
+      width: 100%;
+      border:1px solid var(--lightPrimary);
+    }
+    .inline-label div{
       width: 100%;
     }
   }

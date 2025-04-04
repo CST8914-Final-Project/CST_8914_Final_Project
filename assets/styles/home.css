@@ -25,6 +25,12 @@ td ul {
     margin-top: 0;
     padding-left: 16px;
 }
+.home-header{
+    display: grid;
+    gap:2rem;
+    width: 60vw;
+}
+
 
 /* Responsive Table */
 @media (max-width: 768px) {
@@ -56,4 +62,14 @@ td ul {
         display: block;
         margin-bottom: 5px;
     }
+    .home-header{
+        display: grid;
+        gap:1rem;
+        width:100%
+    }
 }
+.home-header button{
+    width: fit-content;
+}
+
+
