@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Schedule a Call-Empower Ability Labs</title>
     <link rel="stylesheet" href="/assets/styles/schedule-call.css" />
+    <link rel="stylesheet" href="/assets/styles/base.css" />
+  <script src="/assets/scripts/EmpowerAbilityLab.js" defer></script>
+  <script src="/assets/scripts/SceduleACall.js" defer></script>
   </head>
   <body>
   
@@ -17,10 +20,11 @@
       <div id="call">
         <form>
           <!-- Business Name -->
-          <div class="form-group inline-label">
-            <label for="business">Business Name:</label>
-            <input id="business" type="text" name="business" placeholder="Your Business" />
-          </div>
+           
+             <div class="form-group inline-label">
+               <label for="business">Business Name:</label>
+                 <input id="business" type="text" name="business" placeholder="Your Business" />
+           </div>
 
           <!-- Phone Number -->
           <div class="form-group inline-label">
@@ -31,8 +35,19 @@
           <!-- Email -->
           <div class="form-group inline-label">
             <label for="email">Email (required):</label>
-            <input id="email" type="text" name="email" placeholder="you@example.com" />
+            <div>
+              <input
+                id="email"
+                type="text"
+                name="email"
+                placeholder="you@example.com"
+                aria-describedby="email-error"
+                aria-invalid="false"
+              />
+              <p id="email-error" aria-live="assertive" role="alert" style="color: #cd2c2c; font-size: 0.9rem;"></p>
+            </div>
           </div>
+          
 
           <!-- Checkboxes for topics -->
           <fieldset>
@@ -60,19 +75,21 @@
           </fieldset>
 
           <!-- Event Details -->
-          <div id="eventDetails" class="hidden">
+          <div id="eventDetails" class="hidden" aria-hidden="true">
             <label for="event" id="event-label">Please tell us about your event:</label>
             <textarea id="event" name="event" aria-labelledby="event-label"> </textarea>
           </div>
           
           <!-- Switch Toggle -->
-          <div id="switch" role="switch" aria-checked="false" tabindex="0" onclick="toggleSwitch()">
-            <img id="switchToggle" alt="Toggle switch, off" src="/assets/images/toggle_switch_off.jpg" >
-            <span class="switch-label">Receive emails about updates and services</span>
+          <div id="switch" role="switch" aria-checked="false" tabindex="0" aria-labelledby="switch-label" onclick="toggleChange()">
+            <img id="switchToggle" class="switchToggle" alt="" src="/assets/images/toggle_switch_off.jpg" />
+            <span class="switch-label" id="switch-label">Receive emails about updates and services</span>
           </div>
+          
+         
 
           <!--Schedule Button-->
-          <button type="button" class="btn primary">Schedule a Call</button>
+          <button type="submit" class="btn primary">Schedule a Call</button>
 
           <!-- Thank You Message (Hidden initially) -->
           <div id="thankYouMessage" class="hidden">
