@@ -301,7 +301,7 @@ td ul {
     }
 
     td::before {
-        content: attr(headers) ": ";
+        content: attr(data-title) ": ";
         font-weight: bold;
         display: block;
         margin-bottom: 5px;
