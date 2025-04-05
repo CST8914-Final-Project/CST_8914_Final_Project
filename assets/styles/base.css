@@ -37,11 +37,19 @@ main {
 
 .primary {
   background-color: var(--primary);
-  color: white;
+  color: black;
 }
-
+.switchToggle {
+  width: 50px !important;  /* Force width */
+  height: auto !important; /* Maintain aspect ratio */
+  max-width: 50px !important; 
+  max-height: 50px !important;
+  cursor: pointer;
+  display: block; /* Ensures it respects the sizing */
+}
 .primary:hover {
   background-color: var(--lightPrimary);
+  color:black
 }
 
 .light {
@@ -149,9 +157,15 @@ main {
 }
 
 /* navigation */
-nav {
+/* nav {
   width: 35vw;
+} */
+
+nav {
+  width: auto;
+  margin-bottom: 1rem;
 }
+
 nav ul {
   display: flex;
   list-style-type: none;
@@ -168,7 +182,7 @@ nav li {
   flex-grow: 1;
   text-align: center;
   height: 100%;
-  padding: 0.5rem 0;
+  padding: 0.5rem 1.5rem;
 }
 
 nav a {
@@ -210,17 +224,30 @@ nav a:hover {
     text-align: center;
   }
 
-  header img {
+  /* header img {
     width: 25%;
+  } */
+
+  header img {
+    width: 20%;
+    height: auto;
   }
   
-  header {
+  /* header {
     display: flex;
     gap: 10rem;
     align-items: center;
+  } */
+
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
   }
 
-<<<<<<< HEAD
+
   table {
     width: 100%;
     border-collapse: collapse;
@@ -280,7 +307,54 @@ td ul {
         margin-bottom: 5px;
     }
 }
-=======
+
+  .menu-toggle {
+    display: none;
+    font-size: 2rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: var(--primary);
+  }
+  
+  @media (max-width: 768px) {
+    .menu-toggle {
+      display: block;
+      top: 1rem;
+      right: 1rem;
+    }
+
+    header img {
+      width: 40%;
+    }
+  
+    nav {
+      width: 100%;
+    }
+  
+    nav ul {
+      flex-direction: column;
+      width: 100%;
+      margin-top: 1rem;
+      border: none;
+      box-shadow: none;
+    }
+  
+    nav li {
+      text-align: left;
+      padding: 0.5rem 1rem;
+      border-bottom: 1px solid var(--lightPrimary);
+    }
+  
+    #mainNav {
+      display: none;
+    }
+  
+    #mainNav.open {
+      display: block;
+    }
+  }
+
 
   @media screen and (min-width: 500px) {
     body {
@@ -288,4 +362,11 @@ td ul {
     }
    
   }
->>>>>>> 4923b14c0e8ffeea91c9bbb27e25069844338399
+
+
+  @media screen and (min-width: 500px) {
+    body {
+      padding: 2vw 8vw 0 8vw;
+    }
+   
+  }
