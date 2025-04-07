@@ -1,38 +1,4 @@
-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 20px;
-    table-layout: fixed;
-  }
-  .visually-hidden {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    margin: -1px;
-    padding: 0;
-    overflow: hidden;
-    clip: rect(0 0 0 0);
-    border: 0;
-  } 
-  th, td {
-    padding: 16px;
-    text-align: left;
-    width: 33.33%;
-    word-wrap: break-word;
-    border: none;
-    vertical-align: top;
-  }
-  
-  th {
-    background-color: #f4f4f4;
-    text-align: center;
-    font-weight: bold;
-  }
-  
-  td ul {
-    margin-top: 0;
-    padding-left: 16px;
-  }
+
   
   .home-header {
     display: grid;
@@ -40,73 +6,13 @@ table {
     width: 60vw;
   }
   
-  /* Visually hidden class for accessibility */
-  .visually-hidden {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    padding: 0;
-    margin: -1px;
-    overflow: hidden;
-    clip: rect(0, 0, 0, 0);
-    white-space: nowrap;
-    border: 0;
-  }
-  
-  /* Responsive Table */
-  @media (max-width: 768px) {
-    table, thead, tbody, th, td, tr {
-      display: block;
-      width: 100%;
-    }
-  
-    thead {
-      position: absolute;
-      top: -9999px;
-      left: -9999px;
-    }
-  
-    tbody tr {
-      display: block;
-      margin-bottom: 20px;
-      border: 1px solid #ddd;
-      padding: 10px;
-    }
-  
-    td {
-      position: relative;
-      padding-left: 10px;
-      text-align: left;
-    }
-  
-    td::before {
-      content: attr(data-title) ": ";
-      font-weight: bold;
-      display: block;
-      margin-bottom: 5px;
-    }
-  
-    .home-header {
-      display: grid;
-      gap: 1rem;
-      width: 100%;
-    }
-  }
+
   
   .home-header button {
     width: fit-content;
   }
   
-  .visually-hidden {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    margin: -1px;
-    padding: 0;
-    overflow: hidden;
-    clip: rect(0 0 0 0);
-    border: 0;
-  }
+  
 
   .card-grid {
     display: flex;
@@ -122,13 +28,13 @@ table {
     padding: 16px;
     border: 1px solid #ddd;
     border-radius: 8px;
-    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 1px 4px var(--lightPrimary);
   }
 
   .info-card h3 {
     font-weight: bold;
     text-align: center;
-    background-color: #f4f4f4;
+    background-color: var(--lightGrey);
     padding: 10px;
     margin: -16px -16px 16px;
   }
@@ -152,4 +58,9 @@ table {
     .info-card {
       width: 100%;
     }
+    .home-header {
+        display: grid;
+        gap: 1rem;
+        width: 100%;
+      }
   }
