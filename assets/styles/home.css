@@ -1,75 +1,66 @@
-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 20px;
-    table-layout: fixed; /* Ensures equal column width */
-}
 
-th, td {
-    padding: 16px;
-    text-align: left; /* Keeps text left-aligned */
-    width: 33.33%;
-    word-wrap: break-word;
-    border: none;
-    vertical-align: top;
-}
-
-th {
-    background-color: #f4f4f4;
-    text-align: center;
-    font-weight: bold;
-}
-
-/* Fix the misalignment in lists */
-td ul {
-    margin-top: 0;
-    padding-left: 16px;
-}
-.home-header{
+  
+  .home-header {
     display: grid;
-    gap:2rem;
+    gap: 2rem;
     width: 60vw;
-}
+  }
+  
 
-
-/* Responsive Table */
-@media (max-width: 768px) {
-    table, thead, tbody, th, td, tr {
-        display: block;
-        width: 100%;
-    }
-    
-    thead tr {
-        display: none; /* Hide table headers */
-    }
-
-    tbody tr {
-        display: block;
-        margin-bottom: 20px;
-        border: 1px solid #ddd;
-        padding: 10px;
-    }
-
-    td {
-        position: relative;
-        padding-left: 10px; /* Keeps text aligned to the left */
-        text-align: left; /* Ensures text remains left-aligned */
-    }
-
-    td::before {
-        content: attr(headers) ": ";
-        font-weight: bold;
-        display: block;
-        margin-bottom: 5px;
-    }
-    .home-header{
-        display: grid;
-        gap:1rem;
-        width:100%
-    }
-}
-.home-header button{
+  
+  .home-header button {
     width: fit-content;
-}
+  }
+  
+  
 
+  .card-grid {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    margin-top: 20px;
+    flex-wrap: wrap;
+  }
 
+  .info-card {
+    flex: 1 1 30%;
+    background-color: #fff;
+    padding: 16px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 1px 4px var(--lightPrimary);
+  }
+
+  .info-card h3 {
+    font-weight: bold;
+    text-align: center;
+    background-color: var(--lightGrey);
+    padding: 10px;
+    margin: -16px -16px 16px;
+  }
+
+  .info-card ul {
+    margin-top: 0;
+    padding-left: 20px;
+  }
+
+  .learn-more {
+    display: inline-block;
+    margin-top: 10px;
+    text-decoration: underline;
+  }
+
+  @media (max-width: 768px) {
+    .card-grid {
+      flex-direction: column;
+    }
+
+    .info-card {
+      width: 100%;
+    }
+    .home-header {
+        display: grid;
+        gap: 1rem;
+        width: 100%;
+      }
+  }
