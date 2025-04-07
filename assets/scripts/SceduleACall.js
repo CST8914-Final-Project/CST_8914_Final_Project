@@ -8,12 +8,12 @@ document.addEventListener("DOMContentLoaded", function () {
     if (isChecked) {
       // Switch is ON, turn it OFF
       switchElement.setAttribute('aria-checked', 'false');
-      imageTag.src = "/assets/images/toggle_switch_off.jpg";
+      imageTag.src = "assets/images/toggle_switch_off.jpg";
       imageTag.alt = "Toggle switch, off";
     } else {
       // Switch is OFF, turn it ON
       switchElement.setAttribute('aria-checked', 'true');
-      imageTag.src = "/assets/images/toggle_switch_on.jpg";
+      imageTag.src = "assets/images/toggle_switch_on.jpg";
       imageTag.alt = "Toggle switch, on";
     }
   }
@@ -73,7 +73,7 @@ document.addEventListener("DOMContentLoaded", function () {
     // Reset toggle switch image
     const switchToggle = document.getElementById("switchToggle");
     if (switchToggle) {
-      switchToggle.src = "/assets/images/toggle_switch_off.jpg";
+      switchToggle.src = "assets/images/toggle_switch_off.jpg";
     }
 
     // Clear error message
