@@ -1,18 +1,12 @@
-
-  
   .home-header {
     display: grid;
     gap: 2rem;
     width: 60vw;
   }
   
-
-  
   .home-header button {
     width: fit-content;
   }
-  
-  
 
   .card-grid {
     display: flex;
@@ -31,7 +25,7 @@
     box-shadow: 0 1px 4px var(--lightPrimary);
   }
 
-  .info-card h3 {
+  .info-card h2 {
     font-weight: bold;
     text-align: center;
     background-color: var(--lightGrey);

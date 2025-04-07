@@ -211,7 +211,6 @@
   /* Responsive adjustments for smaller screens */
   @media (max-width: 768px) {
     #schedule {
-      margin: 1rem;
       padding: 1rem;
     }
   
